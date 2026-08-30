@@ -49,7 +49,7 @@ public sealed class Program
     /// </summary>
     public static IHostBuilder CreateHostBuilder(string[] args)
     {
-        DeployEnvironment envEnum = DeployEnvironment.FromName(_environment);
+        DeployEnvironment envEnum = DeployEnvironment.FromName(_environment!);
 
         LoggerConfigurationExtension.BuildBootstrapLoggerAndSetGloballySync(envEnum);
 
